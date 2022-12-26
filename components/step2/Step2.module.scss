@@ -1,0 +1,49 @@
+.step1 {
+  width: 100%;
+
+  .title {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 60px;
+    text-align: center;
+    color: #2A3D56;
+  }
+
+  .text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #7D7987;
+    mix-blend-mode: normal;
+  }
+
+  .bts {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+    margin-bottom: 50px;
+    .lbt1 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 22px;
+      color: #007436;
+      background-color: transparent;
+      border: 1px solid #007436;
+      border-radius: 100px;
+      padding: 16px 27px;
+    }
+
+    .lbt2 {
+      font-weight: 600;
+      font-size: 20px;
+      border-radius: 100px;
+      line-height: 22px;
+      color: #FFFFFF;
+      background-color: #007436;
+      border: 1px solid #007436;
+      padding: 16px 27px;
+    }
+  }
+}
