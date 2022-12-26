@@ -4,21 +4,20 @@ import styled from "@emotion/styled";
 
 import clock from "../assets/image.svg";
 import arrow from "../assets/arrow.svg";
-import { textColor } from "../styles/theme";
-import { useMediaQuery, useTheme } from "@mui/material";
+import {textColor} from "../styles/theme";
+import {useMediaQuery, useTheme} from "@mui/material";
 
 const Div = styled.div`
   .center {
     text-align: center;
     margin-bottom: -10%;
   }
+
   .back1 {
     z-index: -2;
-    background: linear-gradient(
-      360deg,
-      #def8c5 0%,
-      rgba(200, 255, 145, 0) 100%
-    );
+    background: linear-gradient(360deg,
+    #def8c5 0%,
+    rgba(200, 255, 145, 0) 100%);
     border-radius: 50%;
     z-index: -1;
     width: 80vw;
@@ -30,12 +29,14 @@ const Div = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     .image1 {
       margin: 10%;
       width: 80%;
       height: 80%;
       margin-bottom: 5%;
     }
+
     .scroll {
       font-style: normal;
       font-weight: 500;
@@ -44,6 +45,7 @@ const Div = styled.div`
       text-align: center;
       color: ${textColor};
     }
+
     .get__umrah {
       font-style: normal;
       font-weight: 400;
@@ -53,47 +55,57 @@ const Div = styled.div`
       display: block;
       color: ${textColor};
     }
+
     .arrow {
       margin-top: 10%;
+      height: 150px;
     }
+
     .mt5 {
       margin-top: 500vh;
-      display:none
+      display: none
     }
   }
 
-  @media only screen and (max-width:  899px) {
+  @media only screen and (max-width: 899px) {
     & {
-      margin-top:15vh
+      margin-top: 15vh
+    }
+
+    .back1 {
+      .arrow {
+        margin-top: 10%;
+        height: 50px;
+      }
     }
   }
 `;
 
 export default function Main() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  return (
-    <Div>
-      <Head>
-        <title>Arava Travel</title>
-        <meta
-          name="description"
-          content="Arava Travel bilan haj va umra safarlarini to'liq ado eting!"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="back1">
-        <Image src={clock} className="image1" alt={""} />
-        <div className="center">
-          <span className="scroll">SCROLL</span>
-          <span className="get__umrah">
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+    return (
+        <Div>
+            <Head>
+                <title>Arava Travel</title>
+                <meta
+                    name="description"
+                    content="Arava Travel bilan haj va umra safarlarini to'liq ado eting!"
+                />
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
+            <div className="back1">
+                <Image src={clock} className="image1" alt={""}/>
+                <div className="center">
+                    <span className="scroll">SCROLL</span>
+                    <span className="get__umrah">
             Get <b>Umrah</b> visa
-            <br />
+            <br/>
             online <b>with us</b>
           </span>
-        </div>
-        <Image src={arrow} className="arrow" alt="scroll" />
-      </div>
-    </Div>
-  );
+                </div>
+                <Image src={arrow} className="arrow" alt="scroll"/>
+            </div>
+        </Div>
+    );
 }

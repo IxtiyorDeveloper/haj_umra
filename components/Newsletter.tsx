@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
-import theme, { textColor } from "../styles/theme";
+import theme, {textColor} from "../styles/theme";
 import Button from "./Button";
 
 const StyledBox = styled(Box)`
@@ -28,7 +28,7 @@ const StyledBox = styled(Box)`
   display: grid;
   justify-content: center;
   align-items: center;
-  
+
   .email__input__box {
     background-color: ${theme.palette.primary.main};
     width: 850px;
@@ -39,6 +39,11 @@ const StyledBox = styled(Box)`
     border-radius: 20px;
     display: flex;
     flex-wrap: nowrap;
+    @media (max-width: 992px) {
+      width: 90%;
+      height: 70px;
+      min-width: unset;
+    }
 
     .input__field {
       display: flex;
@@ -46,7 +51,7 @@ const StyledBox = styled(Box)`
       height: 100% !important;
       flex-grow: 1 !important;
       border: 0 !important;
-      border-radius: 20px !important;
+      border-radius: 10px !important;
       background-color: transparent;
       padding-left: 34px;
       font-weight: 600;
@@ -66,34 +71,38 @@ const StyledBox = styled(Box)`
       font-weight: 600;
       font-size: 20px;
       line-height: 22px;
+      @media (max-width: 992px) {
+        font-size: 15px;
+        line-height: 16px;
+      }
     }
   }
 `;
 
 function Newsletter() {
-  return (
-    <StyledBox>
-      <Box>
-        <Typography className="title">
-          Subscribe <span style={{ fontWeight: "900" }}>Newsletter</span>
-        </Typography>
-        <Typography className="desc">
-          Our goal is top at the heart creative services industry as a digital
-          creator. In has a after comment
-        </Typography>
-      </Box>
-      <Box className="email__input__box">
-        <input className="input__field" placeholder="Enter your email" />
-        <Button
-          backgroundColor={theme.palette.primary.main}
-          className="btn__get__start"
-          borderRadius="20px"
-        >
-          Get start
-        </Button>
-      </Box>
-    </StyledBox>
-  );
+    return (
+        <StyledBox>
+            <Box>
+                <Typography className="title">
+                    Subscribe <span style={{fontWeight: "900"}}>Newsletter</span>
+                </Typography>
+                <Typography className="desc">
+                    Our goal is top at the heart creative services industry as a digital
+                    creator. In has a after comment
+                </Typography>
+            </Box>
+            <Box className="email__input__box">
+                <input className="input__field" placeholder="Enter your email"/>
+                <Button
+                    backgroundColor={theme.palette.primary.main}
+                    className="btn__get__start"
+                    borderRadius="20px"
+                >
+                    Get start
+                </Button>
+            </Box>
+        </StyledBox>
+    );
 }
 
 export default Newsletter;
