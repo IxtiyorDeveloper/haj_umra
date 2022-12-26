@@ -10,6 +10,7 @@ import s3 from "../assets/s3.svg";
 import s4 from "../assets/s4.svg";
 import s5 from "../assets/s5.svg";
 import s6 from "../assets/s6.svg";
+import { useTranslation } from "react-i18next";
 
 const Div = styled.div`
   margin-top: 60px;
@@ -90,15 +91,18 @@ function Card({ title, img, desc }: CardProp) {
 }
 
 export default function HowItsWorks() {
+  const {t} = useTranslation()
   return (
     <Div>
       <span className="how__its_works">
-        How its <strong style={{ fontWeight: 900 }}>works</strong>
+        {t("about_us")}
+        {/* How its <strong style={{ fontWeight: 900 }}>works</strong> */}
       </span>
       <div className="description">
-        The Ministry of Hajj and Umrah upgrades the provided services to
+        {/* The Ministry of Hajj and Umrah upgrades the provided services to
         pilgrims by <br /> using new technologies and facilitates Hajj and Umrah
-        in coordination with all agencies
+        in coordination with all agencies */}
+        {t("our_service_description")}
       </div>
       <Box
         sx={{
@@ -111,43 +115,45 @@ export default function HowItsWorks() {
           <Grid lg={4} md={6} sm={12}>
             <Card
               img={s1}
-              title={"Lorem iosum time"}
-              desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+              title={t("flight_and_visa")}
+              desc={t("flight_and_visa_description")}
             />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
             <Card
               img={s2}
-              title={"Lorem iosum time"}
-              desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+              title={t("ellikboshi")}
+              desc={t("ellikboshi_d")}
             />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
             <Card
               img={s3}
-              title={"Lorem iosum time"}
-              desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+              title={t("mehmonllar")}
+              desc={t("mehmonllar_d")}
             />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
             <Card
               img={s4}
-              title={"Lorem iosum time"}
-              desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+        
+              title={t("hadya")}
+              desc={t("hadya_d")}
             />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
             <Card
               img={s5}
-              title={"Lorem iosum time"}
-              desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+          
+              title={t("mazzali")}
+              desc={t("shifokor_d")}
             />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
             <Card
               img={s6}
-              title={"Lorem iosum time"}
-              desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+              title={t("shifokor")}
+              desc={t("shifokor_d")}
             />
           </Grid>
         </Grid>
