@@ -1,0 +1,55 @@
+.dropzone {
+  width: 100%;
+  height: fit-content;
+  left: 32px;
+  top: 242px;
+  background: transparent;
+  border: 1px dashed #007436;
+  border-radius: 12px;
+  color: white;
+  margin-top: 24px;
+  cursor: pointer;
+
+  .inner {
+    padding: 17.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .con {
+        .top {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 25px;
+          color: #2A3D56;
+
+        }
+
+        .bot {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #7D7987;
+        }
+      }
+    }
+
+    .right {
+      .label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #007436;
+        padding: 10px 22px;
+        background: #FFFFFF;
+        border: 1px solid #007436;
+        border-radius: 150px;
+      }
+    }
+  }
+}

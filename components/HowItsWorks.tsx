@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 
 const Div = styled.div`
   margin-top: 60px;
+
   .how__its_works {
     font-weight: 600;
     font-size: 55px;
@@ -22,6 +23,7 @@ const Div = styled.div`
     color: ${textColor};
     display: block;
   }
+
   .description {
     text-align: center;
     font-weight: 300;
@@ -33,6 +35,7 @@ const Div = styled.div`
     max-width: 100vw;
     margin: 25px 0;
   }
+
   .nTh div:nth-child(n + 1) {
     margin-top: 16;
   }
@@ -45,6 +48,9 @@ const Item = styled.div`
   padding: 38px;
   display: column;
   width: 350px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 
   .title {
     font-weight: 700;
@@ -61,6 +67,7 @@ const Item = styled.div`
     line-height: 28px;
     color: #7d7987;
   }
+
   &:hover {
     cursor: pointer;
   }
@@ -79,6 +86,7 @@ function Card({ title, img, desc }: CardProp) {
         display: "flex",
         justifyContent: "center",
         marginBottom: "37px",
+        width: "100%",
       }}
     >
       <Item className="nTh">
@@ -91,19 +99,11 @@ function Card({ title, img, desc }: CardProp) {
 }
 
 export default function HowItsWorks() {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <Div>
-      <span className="how__its_works">
-        {t("about_us")}
-        {/* How its <strong style={{ fontWeight: 900 }}>works</strong> */}
-      </span>
-      <div className="description">
-        {/* The Ministry of Hajj and Umrah upgrades the provided services to
-        pilgrims by <br /> using new technologies and facilitates Hajj and Umrah
-        in coordination with all agencies */}
-        {t("our_service_description")}
-      </div>
+      <span className="how__its_works">{t("about_us")}</span>
+      <div className="description">{t("our_service_description")}</div>
       <Box
         sx={{
           justifyContent: "space-around",
@@ -120,41 +120,19 @@ export default function HowItsWorks() {
             />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
-            <Card
-              img={s2}
-              title={t("ellikboshi")}
-              desc={t("ellikboshi_d")}
-            />
+            <Card img={s2} title={t("ellikboshi")} desc={t("ellikboshi_d")} />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
-            <Card
-              img={s3}
-              title={t("mehmonllar")}
-              desc={t("mehmonllar_d")}
-            />
+            <Card img={s3} title={t("mehmonllar")} desc={t("mehmonllar_d")} />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
-            <Card
-              img={s4}
-        
-              title={t("hadya")}
-              desc={t("hadya_d")}
-            />
+            <Card img={s4} title={t("hadya")} desc={t("hadya_d")} />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
-            <Card
-              img={s5}
-          
-              title={t("mazzali")}
-              desc={t("shifokor_d")}
-            />
+            <Card img={s5} title={t("mazzali")} desc={t("shifokor_d")} />
           </Grid>
           <Grid lg={4} md={6} sm={12}>
-            <Card
-              img={s6}
-              title={t("shifokor")}
-              desc={t("shifokor_d")}
-            />
+            <Card img={s6} title={t("shifokor")} desc={t("shifokor_d")} />
           </Grid>
         </Grid>
       </Box>

@@ -35,6 +35,20 @@ const Div = styled.div`
   .nTh div:nth-child(n + 1) {
     margin-top: 16;
   }
+  .cont{
+    display: flex;
+    @media(max-width: 600px){
+      flex-direction: column;
+    }
+    .rws{
+      @media(max-width: 600px){
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 200px!important;
+      }
+    }
+  }
 `;
 
 const Item = styled.div`
@@ -259,7 +273,7 @@ export default function Hotels() {
         industry. <br /> Lorem Ipsum has been the industry&apos;s standard dummy
         text ever since
       </div>
-      <Container maxWidth="xl" sx={{ display: "flex" }}>
+      <Container maxWidth="xl" className="cont">
         <Box
           sx={{
             display: "flex",
@@ -267,6 +281,7 @@ export default function Hotels() {
             flexWrap: "wrap",
             marginRight: "30px",
           }}
+          className="rws"
         >
           <div style={{ display: "flex", alignSelf: "flex-end" }}>
             <ArrowContainer>

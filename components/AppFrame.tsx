@@ -87,7 +87,7 @@ export default function AppFrame({ children }: Props) {
             <Image
               src={logo}
               alt="Main Logo"
-              width={250}
+              width={100}
               onClick={() => router.push("/")}
               style={{ cursor: "pointer" }}
             />
