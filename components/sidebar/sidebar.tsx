@@ -5,6 +5,7 @@ import React from "react";
 // import { VscChromeClose } from "react-icons/vsc";
 import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
+import LogoMain from "../LogoMain";
 // import { useRefContext } from "../RefContext";
 
 type Props = {
@@ -18,13 +19,7 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
   return (
     <div className={`${styles.mainSidebar} ${isOpen ? styles.ws : ""}`}>
       <div className={styles.mHeader}>
-        <Image
-          src="/logo-dark.png"
-          className={styles.logo}
-          alt="logo"
-          width={250}
-          height={70}
-        />
+        <LogoMain />
         <div className={styles.iwr} onClick={() => setIsOpen(false)}>
           <CloseIcon />
         </div>

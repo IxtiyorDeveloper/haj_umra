@@ -19,6 +19,7 @@ import logo from "../assets/Logo.svg";
 import Sidebar from "./sidebar/sidebar";
 import Footer from "./Footer";
 import { useTranslation } from "react-i18next";
+import LogoMain from "./LogoMain";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -32,13 +33,13 @@ type Props = {
 const ButtonMenu = styled.button`
   font-family: ${mulish.style.fontFamily}!important;
   text-transform: none;
-  font-weight: 600!important;
+  font-weight: 600 !important;
   font-size: 18px;
   line-height: 22px;
   z-index: 100;
   padding: 0 !important;
   border: none !important;
-  background-color:transparent !important;
+  background-color: transparent !important;
 `;
 
 const StyledButton = styled(Button)`
@@ -83,14 +84,16 @@ export default function AppFrame({ children }: Props) {
             alignItems="center"
             justifyContent="space-between"
             display={{ md: "none" }}
+            mt="16px"
           >
-            <Image
-              src={logo}
-              alt="Main Logo"
-              width={100}
-              onClick={() => router.push("/")}
-              style={{ cursor: "pointer" }}
-            />
+            <div></div>
+            {/*<Image*/}
+            {/*  src={logo}*/}
+            {/*  alt="Main Logo"*/}
+            {/*  width={100}*/}
+            {/*  onClick={() => router.push("/")}*/}
+            {/*  style={{ cursor: "pointer" }}*/}
+            {/*/>*/}
             <div onClick={() => setIsOpen(true)}>
               <MenuIcon />
             </div>
@@ -105,18 +108,18 @@ export default function AppFrame({ children }: Props) {
             justifyContent="space-around"
             display={{ xs: "none", md: "flex" }}
           >
-            <Image
-              src={logo}
-              alt="Main Logo"
-              onClick={() => router.push("/")}
-            />
+            {/*<Image*/}
+            {/*  src={logo}*/}
+            {/*  alt="Main Logo"*/}
+            {/*  onClick={() => router.push("/")}*/}
+            {/*/>*/}
+            <LogoMain onClick={() => router.push("/")} />
             <Stack direction="row" color={dark} spacing={"10px"}>
               <ButtonMenu color="inherit">{t("home")}</ButtonMenu>
               <ButtonMenu color="inherit">{t("about_us")}</ButtonMenu>
               <ButtonMenu color="inherit">{t("hotels")}</ButtonMenu>
               <ButtonMenu color="inherit">{t("howwework")}</ButtonMenu>
               <ButtonMenu color="inherit">{t("contact")}</ButtonMenu>
-              <ButtonMenu color="inherit">{t("select_day")}</ButtonMenu>
             </Stack>
             <StyledButton>{t("select_day")}</StyledButton>
           </Stack>

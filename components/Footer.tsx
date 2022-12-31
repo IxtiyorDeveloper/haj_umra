@@ -87,22 +87,29 @@ function Footer() {
           </Grid>
           <Grid item lg={2} md={6} sm={12}>
             <Item>
-              <Title>About Us</Title>
+              <Title>Биз ҳақимизда</Title>
               <List sx={{ padding: 0 }}>
-                <ListItemTextStyled className={mulish.className}>News</ListItemTextStyled>
-                <ListItemTextStyled className={mulish.className}>Events</ListItemTextStyled>
-                <ListItemTextStyled className={mulish.className}>How it works</ListItemTextStyled>
-                <ListItemTextStyled className={mulish.className}>Apps</ListItemTextStyled>
+                <ListItemTextStyled className={mulish.className}>
+                  Янгиликлар
+                </ListItemTextStyled>
+                <ListItemTextStyled className={mulish.className}>
+                  Тадбирлар
+                </ListItemTextStyled>
+                <ListItemTextStyled className={mulish.className}>
+                  Хизматларимиз
+                </ListItemTextStyled>
+                <ListItemTextStyled className={mulish.className}>
+                  Мобиле илова
+                </ListItemTextStyled>
               </List>
             </Item>
           </Grid>
           <Grid item lg={2} md={6} sm={12}>
             <Item>
-              <Title>Contact</Title>
+              <Title>Боғланиш</Title>
               <List sx={{ padding: 0 }}>
-                <ListItemTextStyled>Help</ListItemTextStyled>
-                <ListItemTextStyled>Contact us</ListItemTextStyled>
-                <ListItemTextStyled>Subscribe</ListItemTextStyled>
+                <ListItemTextStyled>Ёрдам</ListItemTextStyled>
+                <ListItemTextStyled>Биз билан боғланиш</ListItemTextStyled>
               </List>
             </Item>
           </Grid>

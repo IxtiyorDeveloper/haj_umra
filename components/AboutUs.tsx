@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import {Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
 import background1 from "../assets/background_aboutus.svg";
@@ -19,7 +19,6 @@ const StyledBox = styled(Box)`
     right: 0;
     z-index: 0;
   }
-
 
   .box {
     width: 50%;
@@ -70,34 +69,45 @@ const StyledBox = styled(Box)`
 `;
 
 export default function AboutUs() {
-    return (
-        <StyledBox>
-            <Image src={background1} alt="About" className="background__image" layout="fill"/>
-            <Box className="box" zIndex={100}>
-                <div className="yt">
-                    <Typography className="about__us">About Us</Typography>
-                    <Typography className="desc">
-                        Umrah is part of Akbar Travels that was established in 1978 to provide
-                        travel-related solutions in India & Middle East.
-                        <br/>
-                        <br/>
-                        Akbar Travels headquartered in Mumbai the financial capital of India,
-                        is the parent company for the Akbar Group – Middle East venture.
-                        <br/>
-                        <br/>
-                        With a turnover of more than 1.2 Billion dollars, Akbar Travels is one
-                        of the largest Travel Management Company in Asia.
-                    </Typography>
-                    <StyledButton
-                        className="btn__read__more"
-                        backgroundColor={theme.palette.primary.main}
-                        color={"#FFF"}
-                    >
-                        Read more
-                    </StyledButton>
-                </div>
-            </Box>
-            <div style={{backgroundImage: `url('${background1}')`}} className="im"/>
-        </StyledBox>
-    );
+  return (
+    <StyledBox>
+      <Image
+        src={background1}
+        alt="About"
+        className="background__image"
+        layout="fill"
+      />
+      <Box className="box" zIndex={100}>
+        <div className="yt">
+          <Typography className="about__us">Биз ҳақимизда</Typography>
+          <Typography className="desc">
+            Perania Tour фирмаси Аллоҳнинг байтини соғинганлар учун навбатсиз ва
+            ишончли муборак умра зиёратини адо этишингизда сизга кўмаклашамиз.
+            <br />
+            <br />
+            Муқаддас Мадинада илм олган тажрибали йўлбошчиларимиздан ташкил
+            топган жамоа, умра зиёратингизни тўла-тўкис адо этишингизда саёҳат
+            давомида сизга елкадош бўлишади.
+            <br />
+            <br />
+            Сафар олди биз ўз мижозларимизга қулай хизмат турларини танлашда,
+            виза олиш, гуруҳли турларни расмийлаштириш, чипталар, трансферларни
+            банд қилишни шунингдек қаерда дам олиш яхшироқ ва қайси меҳмонхонада
+            қолиш энг ёқимли эканлигини таклиф қиламиз.
+          </Typography>
+          <StyledButton
+            className="btn__read__more"
+            backgroundColor={theme.palette.primary.main}
+            color={"#FFF"}
+          >
+            Батафсил
+          </StyledButton>
+        </div>
+      </Box>
+      <div
+        style={{ backgroundImage: `url('${background1}')` }}
+        className="im"
+      />
+    </StyledBox>
+  );
 }

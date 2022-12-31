@@ -10,6 +10,7 @@ import s2 from "../assets/s2.svg";
 import marked from "../assets/marked.svg";
 import usdollar from "../assets/usdollar.svg";
 import small_arrow from "../assets/small_arrow.svg";
+import { useTranslation } from "react-i18next";
 
 const Div = styled.div`
   margin-top: 100px;
@@ -35,17 +36,17 @@ const Div = styled.div`
   .nTh div:nth-child(n + 1) {
     margin-top: 16;
   }
-  .cont{
+  .cont {
     display: flex;
-    @media(max-width: 600px){
+    @media (max-width: 600px) {
       flex-direction: column;
     }
-    .rws{
-      @media(max-width: 600px){
+    .rws {
+      @media (max-width: 600px) {
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: flex-start;
-        width: 200px!important;
+        width: 200px !important;
       }
     }
   }
@@ -265,13 +266,13 @@ function BigCard({ img, price, title }: BigCardProps) {
 }
 
 export default function Hotels() {
+  const { t } = useTranslation();
   return (
     <Div>
-      <span className="how__its_works">Hotels</span>
+      <span className="how__its_works">Меҳмонхоналар</span>
       <div className="description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. <br /> Lorem Ipsum has been the industry&apos;s standard dummy
-        text ever since
+        Сафарингиз давомида мароқли дам олишингиз учун қуйида кўрсатилган
+        меҳмонхоналардан бирини танлашингиз мумкин
       </div>
       <Container maxWidth="xl" className="cont">
         <Box
@@ -303,7 +304,7 @@ export default function Hotels() {
             display: "flex",
             overflowX: "scroll",
           }}
-          className={"hidden__scroll"}
+          className="scrollHide"
           gap={4}
         >
           <Grid
@@ -315,9 +316,9 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <BigCard
                 img={s1}
-                title={"Lorem iosum time"}
+                title={"Raffles Makkah Palace"}
                 price={"3,754,969"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -325,16 +326,16 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
                 isMarked={true}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -342,15 +343,15 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -358,15 +359,15 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -374,15 +375,15 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -390,15 +391,15 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -406,15 +407,15 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>
@@ -422,15 +423,15 @@ export default function Hotels() {
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s1}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
             <Grid lg={12} md={12} sm={12}>
               <Card
                 img={s2}
-                title={"Lorem iosum time"}
-                desc="An e-service provided by the Ministry of Hajj and Umrah, which enables the pilgrimage services providers"
+                title={"Raffles Makkah Palace"}
+                desc="Located in front of Al Masjid Al-Haram, Dar Al Tawhid Intercontinental Makkah"
               />
             </Grid>
           </Grid>

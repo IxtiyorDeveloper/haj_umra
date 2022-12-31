@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import {Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-import theme, {textColor} from "../styles/theme";
+import theme, { textColor } from "../styles/theme";
 import Button from "./Button";
 
 const StyledBox = styled(Box)`
@@ -80,29 +80,33 @@ const StyledBox = styled(Box)`
 `;
 
 function Newsletter() {
-    return (
-        <StyledBox>
-            <Box>
-                <Typography className="title">
-                    Subscribe <span style={{fontWeight: "900"}}>Newsletter</span>
-                </Typography>
-                <Typography className="desc">
-                    Our goal is top at the heart creative services industry as a digital
-                    creator. In has a after comment
-                </Typography>
-            </Box>
-            <Box className="email__input__box">
-                <input className="input__field" placeholder="Enter your email"/>
-                <Button
-                    backgroundColor={theme.palette.primary.main}
-                    className="btn__get__start"
-                    borderRadius="20px"
-                >
-                    Get start
-                </Button>
-            </Box>
-        </StyledBox>
-    );
+  return (
+    <StyledBox>
+      <Box>
+        <Typography className="title">
+          Янгиликларни кузатиб боринг
+          {/*Subscribe <span style={{fontWeight: "900"}}>Newsletter</span>*/}
+        </Typography>
+        <Typography className="desc">
+          Бизни асосий мақсадимиз ҳар бир мижозга юқори сифатда ўзгача ҳизмат
+          кўрсатишдир
+        </Typography>
+      </Box>
+      <Box className="email__input__box">
+        <input
+          className="input__field"
+          placeholder="Электрон почтангизни киритинг"
+        />
+        <Button
+          backgroundColor={theme.palette.primary.main}
+          className="btn__get__start"
+          borderRadius="20px"
+        >
+          Бошлаш
+        </Button>
+      </Box>
+    </StyledBox>
+  );
 }
 
 export default Newsletter;
